@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded square border -->
+  <rect x="8" y="8" width="240" height="240" rx="24" ry="24" stroke="#7EC3FF" stroke-width="12" fill="none"/>
+  <!-- Circuit branches -->
+  <g stroke="#7EC3FF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left branch -->
+    <circle cx="72" cy="120" r="10" fill="#7EC3FF"/>
+    <path d="M72 120 L72 180"/>
+    <path d="M72 140 L104 140 L104 200"/>
+    
+    <!-- Middle branch -->
+    <circle cx="128" cy="64" r="12" fill="#7EC3FF"/>
+    <path d="M128 64 L128 200"/>
+    
+    <!-- Right branch -->
+    <circle cx="184" cy="100" r="10" fill="#7EC3FF"/>
+    <path d="M184 100 L160 100 L160 200"/>
+  </g>
+</svg>

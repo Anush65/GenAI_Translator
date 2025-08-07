@@ -35,26 +35,26 @@ const ThemeContext = createContext({
   toggleDarkMode: () => {},
 });
 
-const createAppTheme = (darkMode: boolean) => createTheme({
+   const createAppTheme = (darkMode: boolean) => createTheme({
   palette: {
     mode: darkMode ? 'dark' : 'light',
     primary: {
-      main: darkMode ? '#667eea' : '#5a67d8',
-      light: darkMode ? '#8fa4f3' : '#7c3aed',
-      dark: darkMode ? '#4c63d2' : '#4338ca',
+      main: darkMode ? '#8b5cf6' : '#6366f1',
+      light: darkMode ? '#c084fc' : '#93c5fd',
+      dark: darkMode ? '#6d28d9' : '#4338ca',
     },
     secondary: {
-      main: darkMode ? '#764ba2' : '#9333ea',
-      light: darkMode ? '#9575cd' : '#a855f7',
-      dark: darkMode ? '#512da8' : '#7c2d12',
+      main: darkMode ? '#06b6d4' : '#14b8a6',
+      light: darkMode ? '#22d3ee' : '#5eead4',
+      dark: darkMode ? '#0e7490' : '#0f766e',
     },
     background: {
       default: darkMode ? 'transparent' : 'rgba(248, 250, 252, 0.98)',
-      paper: darkMode ? 'rgba(255, 255, 255, 0.03)' : 'rgba(255, 255, 255, 0.9)',
+      paper: darkMode ? 'rgba(255, 255, 255, 0.06)' : 'rgba(255, 255, 255, 0.9)',
     },
     text: {
-      primary: darkMode ? '#ffffff' : '#1a202c',
-      secondary: darkMode ? 'rgba(255, 255, 255, 0.7)' : 'rgba(26, 32, 44, 0.7)',
+      primary: darkMode ? '#f5f7ff' : '#0f172a',
+      secondary: darkMode ? 'rgba(235, 238, 255, 0.75)' : 'rgba(15, 23, 42, 0.7)',
     },
   },
   typography: {
@@ -221,52 +221,49 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            style={{ 
-              minHeight: '100vh', 
-              position: 'relative', 
-              zIndex: 1,
-              background: darkMode 
-                ? 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)'
-                : 'linear-gradient(135deg, rgba(219, 234, 254, 0.9) 0%, rgba(233, 213, 255, 0.9) 100%)'
-            }}
+                             style={{ 
+               minHeight: '100vh', 
+               position: 'relative', 
+               zIndex: 1,
+               background: darkMode 
+                 ? 'radial-gradient(1200px 700px at 20% 10%, rgba(139, 92, 246, 0.18), rgba(0,0,0,0)) , radial-gradient(1000px 600px at 80% 30%, rgba(6, 182, 212, 0.16), rgba(0,0,0,0)) , linear-gradient(135deg, rgba(12, 16, 38, 0.9) 0%, rgba(18, 10, 34, 0.9) 100%)'
+                 : 'radial-gradient(1200px 700px at 20% 10%, rgba(99, 102, 241, 0.25), rgba(255,255,255,0)) , radial-gradient(900px 500px at 85% 25%, rgba(20, 184, 166, 0.22), rgba(255,255,255,0)) , linear-gradient(135deg, rgba(245, 248, 255, 0.96) 0%, rgba(243, 240, 255, 0.96) 100%)'
+             }}
           >
                       <AppBar 
               position="static" 
               sx={{ 
-                background: darkMode 
-                  ? 'rgba(255, 255, 255, 0.03)' 
-                  : 'rgba(255, 255, 255, 0.8)', 
-                backdropFilter: 'blur(20px)',
+                                 background: darkMode 
+                  ? 'linear-gradient(180deg, rgba(20, 12, 40, 0.7) 0%, rgba(10, 16, 38, 0.6) 100%)' 
+                  : 'linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255,255,255,0.75) 100%)', 
+                backdropFilter: 'blur(22px)',
                 borderBottom: darkMode 
-                  ? '1px solid rgba(255, 255, 255, 0.08)'
-                  : '1px solid rgba(0, 0, 0, 0.06)'
+                  ? '1px solid rgba(139, 92, 246, 0.25)'
+                  : '1px solid rgba(99, 102, 241, 0.2)'
               }}
             >
-            <Toolbar>
+                         <Toolbar sx={{ minHeight: 72 }}>
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 style={{ flexGrow: 1 }}
               >
-                <Typography variant="h4" component="div" sx={{ 
+                                 <Typography variant="h4" component="div" sx={{ 
                   display: 'flex', 
                   alignItems: 'center', 
                   gap: 2,
                   color: darkMode ? '#ffffff' : '#1a202c'
                 }}>
-                  <AutoAwesomeRounded sx={{ 
-                    fontSize: 32, 
-                    color: darkMode ? '#667eea' : '#5a67d8'
-                  }} />
+                  <img src="/logo.svg" alt="CLT Logo" style={{ width: 32, height: 32 }} />
                   Creative Language Translator
                 </Typography>
               </motion.div>
               
               {/* Theme Toggle */}
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <LightModeRounded sx={{ 
-                  color: darkMode ? 'rgba(255,255,255,0.5)' : '#f59e0b' 
+                  color: darkMode ? 'rgba(255,255,255,0.55)' : '#f59e0b' 
                 }} />
                 <Switch
                   checked={darkMode}
@@ -300,14 +297,14 @@ function App() {
                   ? 'rgba(255, 255, 255, 0.03)'
                   : 'rgba(255, 255, 255, 0.9)'
               }}>
-                <Tabs
+                                 <Tabs
                   value={tabValue}
                   onChange={handleTabChange}
                   variant="fullWidth"
                   sx={{
                     borderBottom: darkMode 
-                      ? '1px solid rgba(255, 255, 255, 0.1)'
-                      : '1px solid rgba(0, 0, 0, 0.08)',
+                      ? '1px solid rgba(139, 92, 246, 0.25)'
+                      : '1px solid rgba(99, 102, 241, 0.2)',
                     '& .MuiTab-root': {
                       py: 2,
                       minHeight: 'auto',
