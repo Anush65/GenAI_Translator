@@ -3,7 +3,7 @@
 An AI-powered creative language translator that goes beyond literal translation to preserve nuance, tone, and style while offering creative transformations and analysis.
 
 Setup:
-To run, do pip install -r requirements.txt first and then do npm install, and finally double click on the start.bat file in your folder
+To run, do pip install -r requirements.txt first and then do npm install, npm install react-scripts and finally double click on the start.bat file in your folder located in the file explorer where you have cloned this repository.
 
 ## ✨ Features
 
@@ -225,3 +225,4 @@ This project is licensed under the MIT License.
 
 
 Made with ❤️ for the hackathon challenge
+
