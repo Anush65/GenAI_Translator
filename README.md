@@ -2,6 +2,9 @@
 
 An AI-powered creative language translator that goes beyond literal translation to preserve nuance, tone, and style while offering creative transformations and analysis.
 
+Setup:
+To run, do pip install -r requirements.txt first and then do npm install, and finally double click on the start.bat file in your folder
+
 ## ✨ Features
 
 ### 🔄 Core Translation
@@ -219,5 +222,6 @@ This project is licensed under the MIT License.
 - FastAPI for the excellent Python framework
 
 ---
+
 
 Made with ❤️ for the hackathon challenge
