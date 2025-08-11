@@ -176,12 +176,13 @@ def creative_translate_with_ai(text: str, target_lang: str, source_lang: str, st
     Original text: "{text}"
     
     Requirements:
-    1. Preserve the original meaning and emotional tone
+    1. Preserve the original meaning
+    2. Follow the {style} style throughout properly, and give the translation based on the selected style.
     2. Maintain the {style} style throughout
     3. Use culturally appropriate expressions in {target_name}
     4. Handle idioms and slang naturally
-    5. Keep the same level of formality
     6. Preserve any wordplay or literary devices when possible
+
     
     Provide only the translation without explanations.
     """
@@ -202,7 +203,7 @@ def creative_translate_with_ai(text: str, target_lang: str, source_lang: str, st
         try:
             translator = GoogleTranslator(source=source_lang, target=target_lang)
             result = translator.translate(text)
-            return f"[Google Translate] {result}"
+            return f"{result}"
         except Exception as fallback_error:
             return f"⚠️ Translation failed: {str(e)}. Fallback also failed: {str(fallback_error)}"
 
