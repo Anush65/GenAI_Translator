@@ -14,7 +14,6 @@ dist/
 .env.production.local
 
 # IDE files
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -83,3 +82,5 @@ jspm_packages/
 
 # TernJS port file
 .tern-port
+
+config.bat
